@@ -11,8 +11,8 @@ namespace CharacterPainting
         static char[] Charts = "@#&$%*o!;.".ToCharArray();
         static void Main(string[] args)
         {
-            var imageFile = @"C:\Users\Administrator\Desktop\1.png";
-            var savePath = @"C:\Users\Administrator\Pictures\1.txt";
+            var imageFile = @"C:\Users\Administrator\Desktop\2.png";
+            var savePath = @"C:\Users\Administrator\Pictures\2.txt";
 
             var result = new StringBuilder();
             using (var image = Image.Load(imageFile))
@@ -39,6 +39,8 @@ namespace CharacterPainting
                 var buffer = Encoding.UTF8.GetBytes(result.ToString());
                 writer.Write(buffer);
             }
+
+            Console.ReadKey();
         }
     }
 }
